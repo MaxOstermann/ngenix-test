@@ -5,7 +5,7 @@
 
 ## Установка
 
-1. Склонируйте репозиторий: `git clone https://github.com/username/project.git`
+1. Склонируйте репозиторий: `git clone https://github.com/MaxOstermann/ngenix-test.git`
 2. Перейдите в папку проекта: `cd project`
 3. Установите зависимости: `pip install -r requirements.txt`
 
