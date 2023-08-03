@@ -1,3 +1,4 @@
+""" Parser """
 import zipfile
 from xml.etree import ElementTree
 import multiprocessing
@@ -35,14 +36,14 @@ class XmlParser:
         pool.join()
 
         # Запись данных в CSV-файлы
-        with open("file1.csv", "w", newline="") as file1:
+        with open("file1.csv", "w", newline="", encoding="utf-8") as file1:
             writer = csv.writer(file1)
             writer.writerow(["id", "level"])
             for d in xml_data:
                 for row in d:
                     writer.writerow([row["id"], row["level"]])
 
-        with open("file2.csv", "w", newline="") as file2:
+        with open("file2.csv", "w", newline="", encoding="utf-8") as file2:
             writer = csv.writer(file2)
             writer.writerow(["id", "object_name"])
             for d in xml_data:

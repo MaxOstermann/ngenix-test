@@ -1,3 +1,4 @@
+""" Тестирование генерации архивов """
 import os
 import pytest
 from config import OUTPUT_DIR
@@ -32,5 +33,5 @@ class TestXmlGenerator:
         Returns:
             True, если архив существует, иначе False.
         """
-        archive_path = os.path.join(OUTPUT_DIR, f"archive_0.zip")
+        archive_path = os.path.join(OUTPUT_DIR, "archive_0.zip")
         return os.path.exists(archive_path) and os.path.isfile(archive_path)

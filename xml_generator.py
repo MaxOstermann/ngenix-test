@@ -1,3 +1,4 @@
+""" Generator """
 import os
 import random
 import string
@@ -18,7 +19,7 @@ class XmlGenerator:
         SubElement(root, "var", name="id", value=self.get_random_string())
         SubElement(root, "var", name="level", value=str(random.randint(1, 100)))
         objects = SubElement(root, "objects")
-        for k in range(random.randint(1, 10)):
+        for _ in range(random.randint(1, 10)):
             SubElement(objects, "object", name=self.get_random_string())
         return tostring(root)
 
